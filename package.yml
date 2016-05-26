@@ -1,0 +1,18 @@
+name       : nuvola-app-spotify
+version    : 2.1
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-spotify/archive/2.1.tar.gz : b2c1fa48dd6e1386d883e7c7f05f01f9c222414cf4fd5b0b553fffd5fe14cca8
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Spotify Integration for Nuvola Player 3.
+description: |
+    Integration of Spotify into your linux desktop via Nuvola Player.
+builddeps  :
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
